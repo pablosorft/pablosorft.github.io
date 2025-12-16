@@ -1,0 +1,564 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+.menu {
+  float:left;
+  width:14%;
+  text-align:center;
+  margin-top:1%;
+   margin-bottom: 1px;
+}
+
+.menu a {
+  background-color:#e5e5e5;
+  padding:2px;
+  margin-top:2px;
+  display:block;
+  width:100%;
+  color:black;
+    border: thick solid lightgrey;
+    border-radius: 10px;
+	 border-width: 5px 1px 5px 1px;
+    
+}
+.main {
+  float:left;
+  width:100%;
+  
+   margin-top:3%;
+   margin-left:-2%;
+}
+.main button {
+font: 28px arial, sans-serif;
+}
+.main a {
+font: 24px arial, sans-serif;
+}
+
+.sole {
+     float:left;
+  width:100%;
+  
+   margin-top:2%;
+   margin-left:-2%; 
+font: 15px arial, sans-serif;
+}
+.right {
+  float:left;
+  width:98%;
+  background-color:lightgrey;
+   overflow: auto;
+ text-align: center;
+  color:#6B6B6B;
+   display:block;
+   margin-top:5%;
+   margin-left:0%;
+}
+.right button {
+
+font: 28px arial, sans-serif;
+border-radius: 8px;
+}
+.right a {
+
+  margin-top:0px;
+  
+}
+.corte {
+ margin-top: 1px;
+ color: red;
+  text-shadow: 1px 1px 2px #A52A2A;
+  margin-bottom: 1px;
+text-align: center;
+}
+button  {
+text-shadow: 1px 1px 2px #A52A2A;
+}
+
+</style>
+</head>
+<body style="font-family:Verdana;color:#aaaaaa;">
+
+<div class="right">
+   <button style="float:left;" type="button"; onclick="mes1()"><<</button>
+  
+                                                       
+  <a id = "tol" style="margin-left:30px;float:left;margin-top: 6px;" ></a>
+   <a id = "tolana"   style="margin-left:60px;float:left;margin-top: 6px;" ></a>  
+   <a id = "tolula" style="margin-left:10px;float:left;margin-top: 6px;" ></a> 
+  <button style="float:right;" type="button;" onclick="mes2()">>></button>
+</div>
+
+ <h4 class="corte"> Calendario 4 turnos </h4>
+  <div class="menu">
+     
+    <a>L</a>
+    <a id="Link1">.</a>
+    <a id="Link8">.</a>
+    <a id="Link15">.</a>
+    <a id="Link22">.</a>
+    <a id="Link29">.</a>
+    <a id="Link36">.</a>
+  </div>
+  <div class="menu">
+    <a>M</a>
+     <a id="Link2">.</a>
+     <a id="Link9">.</a>
+    <a id="Link16">.</a>
+    <a id="Link23">.</a>
+    <a id="Link30">.</a>
+    <a id="Link37">.</a>
+  </div>
+    <div class="menu">
+    <a>MI</a>
+     <a id="Link3">.</a>
+    <a id="Link10">.</a>
+    <a id="Link17">.</a>
+    <a id="Link24">.</a>
+    <a id="Link31">.</a>
+    <a id="Link38">.</a>
+  </div>
+    <div class="menu">
+    <a>J</a>
+     <a id="Link4">.</a>
+    <a id="Link11">.</a>
+    <a id="Link18">.</a>
+    <a id="Link25">.</a>
+    <a id="Link32">.</a>
+    <a id="Link39">.</a>
+  </div>
+    <div class="menu">
+    <a>V</a>
+     <a id="Link5">.</a>
+    <a id="Link12">.</a>
+    <a id="Link19">.</a>
+    <a id="Link26">.</a>
+    <a id="Link33">.</a>
+    <a id="Link40">.</a>
+  </div>
+    <div class="menu">
+    <a>S</a>
+     <a id="Link6">.</a>
+    <a id="Link13">.</a>
+    <a id="Link20">.</a>
+    <a id="Link27">.</a>
+    <a id="Link34">.</a>
+    <a id="Link41">.</a>
+  </div>
+    <div class="menu">
+    <a>D</a>
+     <a id="Link7">.</a>
+    <a id="Link14">.</a>
+    <a id="Link21">.</a>
+    <a id="Link28">.</a>
+    <a id="Link35">.</a>
+    <a id="Link42">.</a>
+    
+    </div>
+    
+     <div class="main">
+ <button  style="background-color:#6C4F9F;color:#e5e5e5;margin-left:12%;border-radius: 12px;box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);" type="button"; onclick="mes(1)">violeta</button>
+ <button   style="background-color:#799051;color:#e5e5e5;border-radius: 12px;box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);" type="button" onclick="mes(2)">verde</button>
+ <button   style="background-color:#E0E060;color:#363636;border-radius: 12px;box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);" type="button" onclick="mes(3)">amarillo</button>
+ </div>
+  <div class="main">
+ <button   style="background-color:#00E0FF;color:#363636; margin-left:40%;border-radius: 12px;box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);" type="button" onclick="mes(4)">azul.c</button>
+ <!-- <button                    style="background-color:#0000E0;color:#e5e5e5;border-radius: 12px;box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);" type="button" onclick="mes(5)">azul.o</button> -->
+
+ </div>
+ <div class="sole">
+ <a style="background-color:#E0E060;color:black;margin-left:13%;">CUADRADO AMARILLO = TURNO MANANA</a>
+ </div>
+ <div class="sole">
+ <a style="background-color:blue;color:white;margin-left:13%;">CUADRADO AZUL = TURNO NOCHE...........</a>
+ </div>
+ <div class="sole">
+      <a style="background-color:red;color:white;margin-left:13%;">CUADRADO    ROJO  =  TURNO TARDE...........</a>
+ </div>
+  <!-- <div class="sole"> -->
+      <!-- <a style="background-color:#E09000;color:white;margin-left:13%;">CUADRADO    MARRON  =  DIA DE X...............</a> -->
+     
+ <!-- </div> -->
+
+   <div class="sole">
+       <a  style="margin-left:35%;color:black;">pablosorft © 2026</a>
+       
+    
+ </div>
+   <div class="sole">
+       <a style="margin-left:35%;color:black;">............................</a>
+     
+ </div>
+ <script> 
+
+function cargar() {
+
+}
+ </script>
+    
+   <script> 
+var tula;  
+var lunao =0;
+var fiche = "";
+var plesa = "";
+var arrayjjs=[];
+var tula = "";
+var tulul = "";
+function salir() {
+var arrayjjs="";}
+ </script> 
+
+        
+
+    
+
+
+    
+
+
+<script> 
+function mes1() {
+ for(x=1;x<42;x++){
+   document.getElementById("Link" + x).style.borderColor = "lightgrey";
+   document.getElementById("Link" + x).innerHTML = ".";}
+
+lunao -= 1;
+if( lunao<1) {lunao=12}
+ if(lunao == 1){fiche="ENERO"}
+  if(lunao == 2){fiche="FEBRERO"}
+  if(lunao == 3){fiche="MARZO"}
+  if(lunao == 4){fiche="ABRIL"}
+  if(lunao == 5){fiche="MAYO"}
+  if(lunao == 6){fiche="JUNIO"}
+  if(lunao == 7){fiche="JULIO"}
+  if(lunao == 8){fiche="AGOSTO"}
+  if(lunao == 9){fiche="SEPTIEMBRE"}
+  if(lunao == 10){fiche="OCTUBRE"}
+  if(lunao == 11){fiche="NOVIEMBRE"}
+  if(lunao == 12){fiche="DICIEMBRE"}
+ document.getElementById("tol").innerHTML = fiche;
+  document.getElementById("tolana").innerHTML = "DIAS";
+ document.getElementById("myImage").style.opacity = "0.8";
+ cargar(); 
+mes(6);
+
+}  
+
+function mes2() {
+ for(x=1;x<42;x++){
+   document.getElementById("Link" + x).style.borderColor = "lightgrey";
+   document.getElementById("Link" + x).innerHTML = ".";}
+
+
+lunao += 1;
+if( lunao>12) {lunao=1}
+ if(lunao == 1){fiche="ENERO"}
+  if(lunao == 2){fiche="FEBRERO"}
+  if(lunao == 3){fiche="MARZO"}
+  if(lunao == 4){fiche="ABRIL"}
+  if(lunao == 5){fiche="MAYO"}
+  if(lunao == 6){fiche="JUNIO"}
+  if(lunao == 7){fiche="JULIO"}
+  if(lunao == 8){fiche="AGOSTO"}
+  if(lunao == 9){fiche="SEPTIEMBRE"}
+  if(lunao == 10){fiche="OCTUBRE"}
+  if(lunao == 11){fiche="NOVIEMBRE"}
+  if(lunao == 12){fiche="DICIEMBRE"}
+ document.getElementById("tol").innerHTML = fiche;
+  document.getElementById("tolana").innerHTML = "DIAS";
+ document.getElementById("myImage").style.opacity = "0.8";
+ cargar();
+mes(6);
+
+}
+
+
+function mes(membrete) {
+	var arrayjjs = [",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",",,,,,,,,,,,,,,,,,,,,,,,,,DIAS A TRABAJAR,,,DIAS DE X PENDIENTES,,,DIAS DE X ASIGNADAS EN CALENDARIO,,,,,Vacances,,,,",",,,,,CALENDARIO LABORAL -  HORARIO 4 TURNOS DEL  AÑO  2026  EMPRESA KAMAX GALOL COATINGS S.A.,,,,,,,,,,,,,,,,,,,,219,,,0,,,0,,,,,30,,,,",",,,,,,,,,,,,,,,,,,,,,,,,,219,,,0,,,0,,,,,30,,,,Casilla en naranja cuadre calendario",",,,,,,,,,,,,,,,,,,,,,,,,,219,,,0,,,0,,,,,30,,,,",",,,,,,,,,,,,,,,,,,,,,,,,,219,,,0,,,0,,,,,30,,,,",",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",",,TURNO,,J,VI,S,D,L,MA,MI,J,VI,S,D,L,MA,MI,J,VI,S,D,L,MA,MI,J,VI,S,D,L,MA,MI,J,VI,S,,X,V,,,",",ENERO,DIAS,Horas,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,,,,,,",",,17,136,,,,,,,M,M,M,M,,,,N,N,N,N,N,N,N,,,T,T,,T,T,T,T,,,,0,0,,,",",,21,168,,M,M,,,,N,N,N,N,N,N,N,,,T,T,,T,T,T,T,,,,M,M,M,M,M,M,,0,0,,,",",,18,144,,N,N,,,,,,T,T,,T,T,T,T,,,,M,M,M,M,M,M,,,,N,N,N,N,,0,0,,,",",,19,152,,T,T,,,,T,T,,,,M,M,M,M,M,M,,,,N,N,N,N,N,N,N,,,T,T,,0,0,,,",",Turnos,75,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",",,,,D,L,MA,MI,J,VI,S,D,L,MA,MI,J,VI,S,D,L,MA,MI,J,VI,S,D,L,MA,MI,J,VI,S,,,,,X,V,,,",",FEBRERO,DIAS,Horas,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,,,,,,,,,",",,19,152,,M,M,M,M,M,M,,,,N,N,N,N,N,N,N,,,T,T,,T,T,T,T,,,,,,,0,0,,,",",,19,152,,,,N,N,N,N,N,N,N,,,T,T,,T,T,T,T,,,,M,M,M,M,M,M,,,,,0,0,,,",",,19,152,N,N,N,,,T,T,,T,T,T,T,,,,M,M,M,M,M,M,,,,N,N,N,N,,,,,0,0,,,",",,19,152,,T,T,T,T,,,,M,M,M,M,M,M,,,,N,N,N,N,N,N,N,,,T,T,,,,,0,0,,,",",Turnos,76,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",",,,,D,L,MA,MI,J,VI,S,D,L,MA,MI,J,VI,S,D,L,MA,MI,J,VI,S,D,L,MA,MI,J,VI,S,D,L,MA,,X,V,,,",",MARZO,DIAS,Horas,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,,,,,,",",,21,168,,M,M,M,M,M,M,,,,N,N,N,N,N,N,N,,,T,T,,T,T,T,T,,,,M,M,,0,0,,,",",,19,152,,,,N,N,N,N,N,N,N,,,T,T,,T,T,T,T,,,,M,M,M,M,M,M,,,,,0,0,,,",",,22,176,N,N,N,,,T,T,,T,T,T,T,,,,M,M,M,M,M,M,,,,N,N,N,N,N,N,N,,0,0,,,",",,21,168,,T,T,T,T,,,,M,M,M,M,M,M,,,,N,N,N,N,N,N,N,,,T,T,,T,T,,0,0,,,",",Turnos,83,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",",,,,MI,J,VI,S,D,L,MA,MI,J,VI,S,D,L,MA,MI,J,VI,S,D,L,MA,MI,J,VI,S,D,L,MA,MI,J,,,X,V,,,",",ABRIL,DIAS,Horas,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,,,,,,,",",,19,152,M,M,,,,,,N,N,N,N,N,N,N,,,T,T,,T,T,T,T,,,,M,M,M,M,,,0,0,,,",",,18,144,N,N,,,,N,N,,,T,T,,T,T,T,T,,,,M,M,M,M,M,M,,,,N,N,,,0,0,,,",",,16,128,,,,,,,T,T,T,,,,M,M,M,M,M,M,,,,N,N,N,N,N,N,N,,,,,0,0,,,",",,20,160,T,T,,,,,M,M,M,M,M,,,,N,N,N,N,N,N,N,,,T,T,,T,T,T,T,,,0,0,,,",",Turnos,73,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",",,,,VI,S,D,L,MA,MI,J,VI,S,D,L,MA,MI,J,VI,S,D,L,MA,MI,J,VI,S,D,L,MA,MI,J,VI,S,D,,X,V,,,",",MAYO,DIAS,Horas,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,,,,,,",",,21,168,M,M,,,,N,N,N,N,N,N,N,,,T,T,,T,T,T,T,,,,M,M,M,M,M,M,,,0,0,,,",",,22,176,N,N,N,N,N,,,T,T,,T,T,T,T,,,,M,M,M,M,M,M,,,,N,N,N,N,N,,0,0,,,",",,21,168,T,T,,T,T,T,T,,,,M,M,M,M,M,M,,,,N,N,N,N,N,N,N,,,T,T,,,0,0,,,",",,19,152,,,,M,M,M,M,M,M,,,,N,N,N,N,N,N,N,,,T,T,,T,T,T,T,,,,,0,0,,,",",Turnos,83,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",",,,,L,MA,MI,J,VI,S,D,L,MA,MI,J,VI,S,D,L,MA,MI,J,VI,S,D,L,MA,MI,J,VI,S,D,L,MA,,,X,V,,,",",JUNIO,DIAS,Horas,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,,,,,,,",",,5,40,,,N,N,N,N,N,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,,,0,23,,,",",,21,168,N,N,,,T,T,,T,T,T,T,T,,,M,M,M,M,M,,,N,N,N,N,N,,,T,T,,,0,0,,,",",,22,176,T,T,T,T,,,,M,M,M,M,M,M,,N,N,N,N,N,,,T,T,T,T,T,,,M,M,,,0,0,,,",",,23,184,M,M,M,M,M,M,,N,N,N,N,N,,,T,T,T,T,T,,,M,M,M,M,M,,,N,N,,,0,0,,,",",Turnos,71,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",",,,,,,,,,219,0,,,219,0,,,219,0,,,219,0,,,,,,,,,,,,,,,,,,",",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",",,,,,,,CALENDARIO LABORAL -  HORARIO 4 TURNOS DEL  AÑO  2025  EMPRESA KAMAX GALOL COATINGS S.A.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",",,TURNO,,MI,J,VI,S,D,L,MA,MI,J,VI,S,D,L,MA,MI,J,VI,S,D,L,MA,MI,J,VI,S,D,L,MA,MI,J,VI,,X,V,,,",",JULIO,DIAS,Horas,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,,,,,,",",,21,168,V,V,V,V,V,M,M,M,M,M,M,,N,N,N,N,N,,,T,T,T,T,T,,,M,M,M,M,M,,0,5,,,",",,3,24,T,T,T,,,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,,0,26,,,",",,23,184,M,M,M,,,N,N,N,N,N,,,T,T,T,T,T,,,M,M,M,M,M,,,N,N,N,N,N,,0,0,,,",",,23,184,N,N,N,,,T,T,T,T,T,,,M,M,M,M,M,,,N,N,N,N,N,,,T,T,T,T,T,,0,0,,,",",Turnos,70,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",",,,,S,D,L,MA,MI,J,VI,S,D,L,MA,MI,J,VI,S,D,L,MA,MI,J,VI,S,D,L,MA,MI,J,VI,S,D,L,,X,V,,,",",AGOSTO,DIAS,Horas,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,,,,,,",",,19,152,,,N,N,N,N,N,,,T,T,T,T,T,,,M,M,M,M,M,,,N,N,N,N,,,,,,0,0,,,",",,18,144,V,V,T,T,T,T,T,,,M,M,M,M,M,,,N,N,N,N,,,,T,T,T,T,,,,,,0,2,,,",",,0,0,,,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,,,0,28,,,",",,18,144,,,M,M,M,M,M,,,N,N,N,N,N,,,T,T,T,T,,,,M,M,M,M,,,,,,0,0,,,",",Turnos,55,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",",,,,MA,MI,J,VI,S,D,L,MA,MI,J,VI,S,D,L,MA,MI,J,VI,S,D,L,MA,MI,J,VI,S,D,L,MA,MI,,,X,V,,,",",SEPTIEMBRE,DIAS,Horas,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,,,,,,,",",,20,160,,T,T,T,,,M,M,M,M,M,,,N,N,N,N,N,,,T,T,T,T,T,,,N,N,,,,0,0,,,",",,21,168,,M,M,M,,,N,N,N,N,N,,,T,T,T,T,T,,,M,M,M,M,M,,,T,T,T,,,0,0,,,",",,21,168,,N,N,N,,,T,T,T,T,T,,,M,M,M,M,M,,,N,N,N,N,N,,,M,M,M,,,0,0,,,",",,1,8,,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,V,N,,,0,28,,,",",Turnos,63,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",",,,,J,VI,S,D,L,MA,MI,J,VI,S,D,L,MA,MI,J,VI,S,D,L,MA,MI,J,VI,S,D,L,MA,MI,J,VI,S,,X,V,,,",",OCTUBRE,DIAS,Horas,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,,,,,,",",,21,168,,T,T,,T,T,T,T,,,,M,M,M,M,M,M,,,,N,N,N,N,N,N,N,,,T,T,,0,0,,,",",,20,160,T,,,,M,M,M,M,M,M,,,,N,N,N,N,N,N,N,,,T,T,,T,T,T,T,,,,0,0,,,",",,22,176,M,M,M,,,,N,N,N,N,N,N,N,,,T,T,,T,T,T,T,,,,M,M,M,M,M,M,,0,0,,,",",,22,176,N,N,N,N,N,N,,,T,T,,T,T,T,T,,,,M,M,M,M,M,M,,,,N,N,N,N,,0,0,,,",",Turnos,85,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",",,,,D,L,MA,MI,J,VI,S,D,L,MA,MI,J,VI,S,D,L,MA,MI,J,VI,S,D,L,MA,MI,J,VI,S,D,L,,,X,V,,,",",NOVIEMBRE,DIAS,Horas,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,,,,,,,",",,20,160,,T,T,T,T,,,,M,M,M,M,M,M,,,,N,N,N,N,N,N,N,,,T,T,,T,,,0,0,,,",",,20,160,,M,M,M,M,M,M,,,,N,N,N,N,N,N,N,,,T,T,,T,T,T,T,,,,M,,,0,0,,,",",,19,152,,,,N,N,N,N,N,N,N,,,T,T,,T,T,T,T,,,,M,M,M,M,M,M,,,,,0,0,,,",",,21,168,N,N,N,,,T,T,,T,T,T,T,,,,M,M,M,M,M,M,,,,N,N,N,N,N,N,,,0,0,,,",",Turnos,80,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",",,,,MA,MI,J,VI,S,D,L,MA,MI,J,VI,S,D,L,MA,MI,J,VI,S,D,L,MA,MI,J,VI,S,D,L,MA,MI,J,,X,V,,,",",DICIEMBRE,DIAS,Horas,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,,,,,,",",,16,128,T,T,T,,,,M,M,M,M,M,M,,,,N,N,N,N,N,N,N,,,,,,V,V,,,,0,2,,,",",,17,136,M,M,M,M,M,,,,N,N,N,N,N,N,N,,,T,T,,T,T,T,,,,,V,V,,,,0,2,,,",",,16,128,,N,N,N,N,N,N,N,,,T,T,,T,T,T,T,,,,M,M,M,,,,,V,V,,,,0,2,,,",",,13,104,N,,,T,T,,T,T,T,T,,,,M,M,M,M,M,M,,,,,,,,,V,V,,,,0,2,,,",",Turnos,62,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,"];
+
+  
+ 
+  
+
+  
+ 
+  
+    for(var i=0;i<arrayjjs.length;i++)
+    {
+       var tula = arrayjjs[i].split(",");
+        
+       
+      
+      
+       if(tula[1]== fiche) { tula = arrayjjs[i - 1].split(",");
+            
+            if(tula[4] == "L"){
+               tula = arrayjjs[i + membrete].split(",");
+               plesa = arrayjjs[i].split(",");
+               tulul = tula[2];
+               var jsarray = Array.from(tula);
+			   var jsplesa = Array.from(plesa);
+			  
+               jsarray.shift();  
+               jsarray.shift();  
+               jsarray.shift();  
+			   jsarray.shift();
+			   jsarray.unshift("");  
+               
+               jsplesa.shift();
+               jsplesa.shift();
+               jsplesa.shift();
+               jsplesa.shift();
+                jsplesa.unshift("."); 
+
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");    
+			   
+           }  
+           if(tula[4] == "MA"){
+               tula = arrayjjs[i + membrete].split(",");
+			     plesa = arrayjjs[i].split(",");
+			     tulul = tula[2];
+               var jsarray = Array.from(tula);
+			  var jsplesa = Array.from(plesa);
+               jsarray.shift();        
+               jsarray.shift();        
+               jsarray.shift();        
+               jsarray.shift();        
+               jsarray.unshift("");    
+               jsarray.unshift(""); 
+			         
+                
+				
+			   jsplesa.shift();      
+               jsplesa.shift();      
+               jsplesa.shift();      
+               jsplesa.shift();      
+               jsplesa.unshift(".");  
+               jsplesa.unshift("."); 
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");               
+			   
+		   }
+
+           if(tula[4] == "MI"){
+               tula = arrayjjs[i + membrete].split(",");
+			     plesa = arrayjjs[i].split(",");
+               var jsarray = Array.from(tula);
+			   var jsplesa = Array.from(plesa);
+			   tulul = tula[2];
+               jsarray.shift();
+               jsarray.shift();
+               jsarray.shift();
+               jsarray.shift();
+               jsarray.unshift("");
+               jsarray.unshift("");
+               jsarray.unshift("");
+               
+			   jsplesa.shift();
+		       jsplesa.shift();
+		       jsplesa.shift();
+		       jsplesa.shift();
+		       jsplesa.unshift(".");
+		       jsplesa.unshift(".");
+		       jsplesa.unshift(".");
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");		   
+               
+               
+           }  
+		   
+           if(tula[4] == "J"){
+               tula = arrayjjs[i + membrete].split(",");
+			     plesa = arrayjjs[i].split(",");
+               var jsarray = Array.from(tula);
+			   var jsplesa = Array.from(plesa);
+			   tulul = tula[2];
+               jsarray.shift();
+               jsarray.shift();
+               jsarray.shift();
+               jsarray.shift();
+               jsarray.unshift("");
+               jsarray.unshift("");
+               jsarray.unshift("");  
+			   jsarray.unshift(""); 
+           
+		       jsplesa.shift();
+		       jsplesa.shift();
+		       jsplesa.shift();
+		       jsplesa.shift();
+		       jsplesa.unshift(".");
+		       jsplesa.unshift(".");
+		       jsplesa.unshift(".");
+		       jsplesa.unshift(".");
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");		   
+		   } 
+            if(tula[4] == "VI"){
+               tula = arrayjjs[i + membrete].split(",");
+			     plesa = arrayjjs[i].split(",");
+               var jsarray = Array.from(tula);
+			  var jsplesa = Array.from(plesa);
+			  tulul = tula[2];
+               jsarray.shift();
+               jsarray.shift();
+               jsarray.shift();
+               jsarray.shift();
+               jsarray.unshift("");
+               jsarray.unshift("");
+               jsarray.unshift("");  
+			   jsarray.unshift("");
+			   jsarray.unshift("");
+			   
+			   jsplesa.shift();
+               jsplesa.shift();
+               jsplesa.shift();			
+			   jsplesa.shift();
+               jsplesa.unshift(".");
+               jsplesa.unshift(".");
+               jsplesa.unshift("."); 
+               jsplesa.unshift(".");
+               jsplesa.unshift(".");
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");			
+                
+                
+            }
+      
+            
+			if(tula[4] == "S"){
+               tula = arrayjjs[i + membrete].split(",");
+			     plesa = arrayjjs[i].split(",");
+               var jsarray = Array.from(tula);
+			 var jsplesa = Array.from(plesa);
+			 tulul = tula[2];
+               jsarray.shift();
+               jsarray.shift();
+               jsarray.shift();
+               jsarray.shift();
+               jsarray.unshift("");
+               jsarray.unshift("");
+               jsarray.unshift("");  
+			   jsarray.unshift("");
+			   jsarray.unshift("");
+			   jsarray.unshift("");
+				
+			   jsplesa.shift();
+			   jsplesa.shift();
+			   jsplesa.shift();
+               jsplesa.shift();
+		       jsplesa.unshift(".");
+		       jsplesa.unshift(".");
+		       jsplesa.unshift(".");  
+		       jsplesa.unshift(".");
+		       jsplesa.unshift(".");
+		       jsplesa.unshift(".");
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");		   
+		   }	
+           
+            if(tula[4] == "D"){
+               tula = arrayjjs[i + membrete].split(",");
+			     plesa = arrayjjs[i].split(",");
+               var jsarray = Array.from(tula);
+			   var jsplesa = Array.from(plesa);
+			   tulul = tula[2];
+               jsarray.shift();
+               jsarray.shift();
+               jsarray.shift();
+               jsarray.shift();
+               jsarray.unshift("");
+               jsarray.unshift("");
+               jsarray.unshift("");  
+			   jsarray.unshift("");
+			   jsarray.unshift("");
+			   jsarray.unshift("");
+			   jsarray.unshift("");
+				
+			   jsplesa.shift();
+               jsplesa.shift();
+		       jsplesa.shift();
+               jsplesa.shift();
+               jsplesa.unshift(".");
+               jsplesa.unshift(".");
+               jsplesa.unshift("."); 
+               jsplesa.unshift(".");
+               jsplesa.unshift(".");
+               jsplesa.unshift(".");
+               jsplesa.unshift(".");
+
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");
+ jsplesa.push("");
+
+
+		  }
+      
+       
+          
+       
+}
+						   
+                               
+  }
+  	
+                              for(x=1;x<42;x++){
+                              if(jsplesa[x] == "") {jsplesa[x]="."}
+                               document.getElementById("Link" + x).innerHTML = jsplesa[x];
+                                document.getElementById("tolula").innerHTML =  tulul;
+                               
+                              if (jsarray[x]=="M"){ document.getElementById("Link" + x).style.borderColor = "#FFFF60";}
+                              if (jsarray[x]=="N"){ document.getElementById("Link" + x).style.borderColor = "blue";}
+                              if (jsarray[x]=="X"){ document.getElementById("Link" + x).style.borderColor = "#E09000";}
+                              if (jsarray[x]=="T"){ document.getElementById("Link" + x).style.borderColor = "red";}
+							  if (jsarray[x]=="V"){document.getElementById("Link" + x).innerHTML  += "." + "V"; document.getElementById("Link" + x).style.fontSize = "16px";  document.getElementById("Link" + x).style.borderColor = "lightgrey"; }
+							   
+							  if (jsarray[x]=="" || jsarray[x]=="0" || jsarray[x]=="2" || jsarray[x]=="1"|| jsarray[x]=="4"|| jsarray[x]=="5" ){ document.getElementById("Link" + x).style.borderColor = "lightgrey";}}
+							  console.log(jsplesa);
+								
+							  
+    }  
+
+ 
+
+</script>
