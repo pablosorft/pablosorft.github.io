@@ -3,16 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Afiliación CCOO Valencia</title>
+  <title>Menú Vertical con Fondo Bonito</title>
   <!-- Enlace a Bootstrap 4 -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <!-- Estilos personalizados -->
   <style>
-   
+ 
     body {
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      background: linear-gradient(135deg, #ff7e5f, #feb47b);
       font-family: 'Arial', sans-serif;
       color: white;
+    }
+	 a.list-group-item {
+    
+      text-align: center;
+  
     }
     
   
@@ -22,7 +27,6 @@
 
     .list-group-item {
       font-size: 18px;
-	  text-align: center;
       font-weight: bold;
       color: #333;
       background-color: #fff;
@@ -34,36 +38,34 @@
     .list-group-item:hover {
       background-color: #ff5733;
       color: white;
+	  text-align: center;
       transform: translateX(10px);
     }
 
     .list-group-item.active {
       background-color: #0066cc;
       color: white;
+	  text-align: center;
     }
 
-   
     .content {
       background-color: rgba(0, 0, 0, 0.5);
       padding: 20px;
       border-radius: 10px;
-	  text-align: center;
     }
 
-    h1 {
-      font-size: 36px;
+    h5 {
+      font-size: 26px;
       text-align: center;
-	  text-align: center;
       margin-bottom: 20px;
     }
 
     p {
       font-size: 18px;
       text-align: center;
-	  text-align: center;
     }
 
-    /* Iconos en el menú */
+   
     .fas {
       margin-right: 10px;
     }
@@ -76,26 +78,28 @@
       <div class="col-md-3">
         <!-- Menú vertical -->
         <div class="list-group">
-          <a href="https://afiliate.ccoo.es/sol_afi_web/solicitud.php" class="list-group-item list-group-item-action" target="_parent">
-            <i class="fas fa-user-plus"></i> Afiliación CCOO  Metal Valencia
+          <a href="calendario2026_tres_turnos.html" class="list-group-item list-group-item-action">
+            <i class="fas fa-home"></i> Calendario 3 turnos
           </a>
-          <a href="https://www.graduados-sociales.com/files/area_privada/convenios/VSideroAR.pdf" class="list-group-item list-group-item-action" target="_parent">
-            <i class="fas fa-home"></i> Convenio del metal BOP Valencia
+          <a href="calendario2026cuartoturno.html" class="list-group-item list-group-item-action">
+            <i class="fas fa-info-circle"></i> Calendario 4 turnos
           </a>
-           <a href="principal1.html" class="list-group-item list-group-item-action" target="_parent">
-            <i class="fas fa-home"></i> Calendarios
+          <a href="calendario2026quintoturno.html" class="list-group-item list-group-item-action">
+            <i class="fas fa-phone-alt"></i> Calendario 5 turnos
           </a>
-		   <a href="informa.html" class="list-group-item list-group-item-action" target="_parent">
-            <i class="fas fa-home"></i> Infomacion
+          <a href="calendario2026antiestres.html" class="list-group-item list-group-item-action">
+            <i class="fas fa-envelope"></i> Calendario 5 turnos Antiestres
           </a>
+          <a href="calendario2026logistica.html" class="list-group-item list-group-item-action">
+            <i class="fas fa-envelope"></i> Calendario logistica
+          </a
         </div>
       </div>
       <div class="col-md-9">
         <!-- Contenido principal -->
         <div class="content">
-          <h4>Bienvenido a la aplicacion de Calendarios de 2026 de la seccion sindical de CCOO Kamax Galol </h4>
-          <p>Desde aquí puedes afiliarte a CCOO, obtener información sobre el convenio colectivo y tener tu calendario digital
-          <p>Haz clic en el enlace correspondiente del menú de arriba para navegar por lo que mas te interese.</p>
+          <h5>Aqui tienes tu calendario</h5>
+          <p>Selecciona una de las opciones del menú de arriba para ir a tu calendario.</p>
         </div>
       </div>
     </div>
@@ -111,3 +115,4 @@
 
 </body>
 </html>
+
