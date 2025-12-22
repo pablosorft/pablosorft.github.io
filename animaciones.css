@@ -1,0 +1,18 @@
+/* Animación para días con comentario */
+a.con-comentario {
+  background-color: lightgrey !important;
+  animation: pulso 1.6s infinite ease-in-out;
+}
+
+/* Keyframes */
+@keyframes pulso {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
